@@ -22,5 +22,7 @@
             "name": "hawkiq",
             "email": "osama.sw87@yahoo.com"
         }
-    ]
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
