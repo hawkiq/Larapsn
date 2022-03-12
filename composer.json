@@ -1,9 +1,9 @@
 {
     "name": "hawkiq/larapsn",
-    "description": "PlayStation unofficial API to bring basic information for players such as number of trophies or their avatar",
+    "description": "Laravel Package to get Playstation player trophies stats plus few other infos",
     "type": "library",
     "require": {
-        "sunra/php-simple-html-dom-parser": "^1.5"
+        "kub-at/php-simple-html-dom-parser": "dev-master"
     },
     "license": "MIT",
     "autoload": {
@@ -17,6 +17,5 @@
             "email": "me@osama.app"
         }
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "minimum-stability": "dev"
 }
