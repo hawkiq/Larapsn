@@ -4,9 +4,6 @@
 
 getting player stats for Playstation trophies is easy task but required paid services around 20$ per month, so since I love gaming and coding I decided to make my own simple API to bring basic information for players such as number of trophies or their avatar and last game played etc..
 
-- [OsaMa Soft](https://osama.app).
-- [Trophy Guide Website](https://trophyguid.osama.app).
-
 if you looking for php class without using Laravel you can use this [PSNApi](https://github.com/hawkiq/PSNApi)
 
 ## Installation
@@ -62,6 +59,14 @@ Here is the final output from getInfos method
 
 If you discover a security vulnerability within Larapsn, please send an e-mail to OsaMa via [me@osama.app](mailto:me@osama.app). All security vulnerabilities will be promptly addressed.
 
+## Preview
+
+this class used in following sites
+
+- [Trophy Guide Website](https://trophyguide.osama.app).
+
+feel free to contact me if you want to add your site.
+
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Larapsn is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
