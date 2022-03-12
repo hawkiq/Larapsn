@@ -1,0 +1,20 @@
+{
+    "name": "hawkiq/larapsn",
+    "description": "PlayStation unofficial API to bring basic information for players such as number of trophies or their avatar",
+    "type": "project",
+    "require": {
+        "sunra/php-simple-html-dom-parser": "^1.5"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hawkiq\\Larapsn\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hawkiq",
+            "email": "osama.sw87@yahoo.com"
+        }
+    ]
+}
