@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'f3e6ec31f2ad11e7d2c8343fd56c09a07835a7b5',
+        'reference' => 'f31fd58f7b401e6903381ac06baf53d2a9a2bc9f',
         'name' => 'hawkiq/larapsn',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'f3e6ec31f2ad11e7d2c8343fd56c09a07835a7b5',
+            'reference' => 'f31fd58f7b401e6903381ac06baf53d2a9a2bc9f',
             'dev_requirement' => false,
         ),
         'kub-at/php-simple-html-dom-parser' => array(

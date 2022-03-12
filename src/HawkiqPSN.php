@@ -5,14 +5,14 @@
  * User: Osama
  * Date: 12/03/2022
  * @author OsaMa hawkiq
- * @version 1.0.0
+ * @version 1.0.2
  * @package hawkiq/larapsn
  */
 
 
 namespace Hawkiq\Larapsn;
 
-use Sunra\PhpSimple\HtmlDomParser;
+use KubAT\PhpSimple\HtmlDomParser;
 
 class HawkiqPSN
 {
@@ -28,6 +28,9 @@ class HawkiqPSN
         $this->psnid = $psnid;
     }
 
+    /*
+    * createHtmlObject get dom and save it for parsing to save bandwidth
+    */
     private function createHtmlObject($psnID, $type = 1)
     {
         switch ($type) {
@@ -44,12 +47,19 @@ class HawkiqPSN
         $html = HtmlDomParser::file_get_html($url);
         return $html;
     }
+    /*
+    * getAvatar parse dom and get link for avatar
+    */
     private function getAvatar($html)
     {
         $avatar = "";
         $avatar = $html->find('meta [property="og:image"]', 0)->content;
         return $avatar;
     }
+
+    /*
+    * getTrophies parse dom and get trophies count for player
+    */
     private function getTrophies($html)
     {
         $trophies = array();
