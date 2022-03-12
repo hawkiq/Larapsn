@@ -13,46 +13,49 @@ if you looking for php class without using Laravel you can use this [PSNApi](htt
 
 import package into your project using composer
 
-`composer require hawkiq/larapsn`
+```
+composer require hawkiq/larapsn
+```
 
 ## Usage
 
-create new object
+initial using PSN id
 
 ```
+use Hawkiq\Larapsn\HawkiqPSN;
+// rest of used classes
+
 $psnID = "hawkiq";
 $psnapi = new HawkiqPSN($psnID);
-
 ```
 
-note that the class take initial parameter which is Player PSN ID
-
-`$playerInfo = $psnapi->getInfos();`
-
-this will return array of info and use it like you want :)
+Now you can get All player info using one method
 
 ```
-Array
-(
-    [username] => hawkiq
-    [about] => * Founder of Iraqi PlayStation Players Leaderboard  •  * instagram:hawkiq  •  oJJI IJI oJI IJ
-    [avatar] => https://i.psnprofiles.com/avatars/l/G4613a5e4c.png
-    [trophies] => Array
-        (
-            [total] => 5441
-            [platinum] => 110
-            [gold] => 401
-            [silver] => 1068
-            [bronze] => 3862
-        )
+$playerInfo = $psnapi->getInfos();
+```
 
-    [level] => 406
-    [lastgame] => Horizon Zero Dawn
-    [played] => 153
-    [completion] => 74.96
-    [complgames] => 77
-    [hiddentrophies] => 0
-)
+Here is the final output from getInfos method
+
+```
+{
+  "username": "hawkiq ",
+  "about": "* Founder of Iraqi PlayStation Players Leaderboard&nbsp;&nbsp;•&nbsp;&nbsp;* instagram:hawkiq&nbsp;&nbsp;•&nbsp;&nbsp;oJJI IJI oJI IJ",
+  "avatar": "https://i.psnprofiles.com/avatars/l/G4613a5e4c.png",
+  "trophies": {
+    "total": 5595,
+    "platinum": 112,
+    "gold": 404,
+    "silver": 1090,
+    "bronze": 3989
+  },
+  "level": "409",
+  "lastgame": "A Plague Tale: Innocence",
+  "played": "158",
+  "completion": "73.62",
+  "complgames": "78",
+  "hiddentrophies": 0
+}
 ```
 
 ## Security Vulnerabilities
