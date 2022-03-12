@@ -2,21 +2,21 @@
     "name": "hawkiq/larapsn",
     "description": "PlayStation unofficial API to bring basic information for players such as number of trophies or their avatar",
     "type": "library",
+    "version": "1.0.0",
     "require": {
         "sunra/php-simple-html-dom-parser": "^1.5"
     },
     "license": "MIT",
+    "source": {
+        "url": "git:///github.com/hawkiq/Larapsn.git",
+        "type": "git",
+        "reference": "master"
+    },
     "autoload": {
         "psr-4": {
             "Hawkiq\\Larapsn\\": "src/"
         }
     },
-    "repositories": [
-        {
-            "type": "composer",
-           "url": "https://github.com/hawkiq/Larapsn"
-       }
-   ],
     "authors": [
         {
             "name": "hawkiq",

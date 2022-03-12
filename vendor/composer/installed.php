@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
+        'pretty_version' => '1.0.0',
         'version' => '1.0.0.0',
-        'type' => 'project',
+        'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'master',
         'name' => 'hawkiq/larapsn',
         'dev' => true,
     ),
     'versions' => array(
         'hawkiq/larapsn' => array(
-            'pretty_version' => '1.0.0+no-version-set',
+            'pretty_version' => '1.0.0',
             'version' => '1.0.0.0',
-            'type' => 'project',
+            'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'master',
             'dev_requirement' => false,
         ),
         'sunra/php-simple-html-dom-parser' => array(
