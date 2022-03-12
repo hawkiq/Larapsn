@@ -93,7 +93,6 @@ class HawkiqPSN
         return $info;
     }
 
-
     public function getRarity()
     {
         $info_r = array();
