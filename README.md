@@ -19,8 +19,11 @@ import package into your project using composer
 
 create new object
 
-`$psnID = "hawkiq";`
-`$psnapi = new HawkiqPSN($psnID);`
+```
+$psnID = "hawkiq";
+$psnapi = new HawkiqPSN($psnID);
+
+```
 
 note that the class take initial parameter which is Player PSN ID
 
