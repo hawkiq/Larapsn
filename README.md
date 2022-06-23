@@ -64,6 +64,7 @@ If you discover a security vulnerability within Larapsn, please send an e-mail t
 this class used in following sites
 
 - [Trophy Guide Website](https://trophyguide.osama.app).
+- [Leaderboard Website](https://leaderboard.osama.app/).
 
 feel free to contact me if you want to add your site.
 
