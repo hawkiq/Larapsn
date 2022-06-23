@@ -5,7 +5,7 @@
  * User: Osama
  * Date: 12/03/2022
  * @author OsaMa hawkiq
- * @version 1.0.3
+ * @version 1.0.4
  * @package hawkiq/larapsn
  */
 
@@ -23,6 +23,11 @@ class HawkiqPSN
      * @param $psnid
      */
 
+    /**
+     * The function takes a string as an argument and returns a string
+     * 
+     * @param psnid The PSN ID of the user you want to get the trophies for.
+     */
     public function __construct($psnid)
     {
         $this->psnid = $psnid;
@@ -31,6 +36,13 @@ class HawkiqPSN
     /*
     * createHtmlObject get dom and save it for parsing to save bandwidth
     */
+  /**
+   * It takes a url and returns the html of that url.
+   * 
+   * @param type 1 = profile, 2 = stats
+   * 
+   * @return The HTML of the page.
+   */
     private function createHtmlObject($type = 1)
     {
         switch ($type) {
@@ -50,6 +62,13 @@ class HawkiqPSN
     /*
     * getAvatar parse dom and get link for avatar
     */
+   /**
+    * It finds the meta tag with the property of og:image and returns the content of that tag.
+    * 
+    * @param html the HTML of the page you want to scrape
+    * 
+    * @return The avatar of the user.
+    */
     private function getAvatar($html)
     {
         $avatar = "";
@@ -60,6 +79,14 @@ class HawkiqPSN
     /*
     * getTrophies parse dom and get trophies count for player
     */
+  /**
+   * It takes a string of HTML, finds the text inside of a few <code>&lt;li&gt;</code> tags, removes
+   * the commas and percentage signs, and returns an array of integers.
+   * 
+   * @param html The HTML of the page
+   * 
+   * @return An array of trophies.
+   */
     private function getTrophies($html)
     {
         $trophies = array();
@@ -77,6 +104,11 @@ class HawkiqPSN
         $trophies = array("total" => (int)$total, "platinum" => (int)$platinum, "gold" => (int)$gold, "silver" => (int)$silver, "bronze" => (int)$bronze);
         return $trophies;
     }
+   /**
+    * It gets the user's information from the PSN website
+    * 
+    * @return An array of information about the user.
+    */
     public function getInfos()
     {
         $html = $this->createHtmlObject();
@@ -103,6 +135,12 @@ class HawkiqPSN
         return $info;
     }
 
+  /**
+   * It takes the text from a website, removes the words "Ultra", "Very", "Rare", "Uncommon", "Common",
+   * "(", ")", ",","\t" and then splits the remaining text into an array.
+   * 
+   * @return An array of the rarity of the cards in the set.
+   */
     public function getRarity()
     {
         $info_r = array();
