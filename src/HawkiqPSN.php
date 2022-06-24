@@ -5,7 +5,7 @@
  * User: Osama
  * Date: 12/03/2022
  * @author OsaMa hawkiq
- * @version 1.0.4
+ * @version 1.0.5
  * @package hawkiq/larapsn
  */
 
@@ -113,7 +113,7 @@ class HawkiqPSN
     {
         $html = $this->createHtmlObject();
         $username = trim($html->find('span[class=username]', 0)->plaintext);
-        $about = $html->find('span[class=comment]', 0)->plaintext;
+        $about = $html->find('span[class=comment]', 0)!= null ?$html->find('span[class=comment]', 0)->plaintext : '';
         $level = $html->find('li[class=icon-sprite level]', 0)->plaintext;
         $trophies = $this->getTrophies($html);
         $avatar = $this->getAvatar($html);
